@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bee bot: Класс BoardCell</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bee bot<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">App for childs to teach programming basics</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_board_cell.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="#pri-attribs">Закрытые данные</a> &#124;
+<a href="class_board_cell-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс BoardCell</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс инкапсулирует графическое отображение и логику поведения ячеек игрового поля  
+ <a href="class_board_cell.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="board__cell_8h_source.html">board_cell.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:BoardCell:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_board_cell.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a74bbd4586ab6d8f81be4335dbaedad83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a74bbd4586ab6d8f81be4335dbaedad83">BoardCell</a> (int rowInd_, int colInd_, int size_, QGraphicsItem *parent=nullptr)</td></tr>
+<tr class="separator:a74bbd4586ab6d8f81be4335dbaedad83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad44d621cd6463f107484e21b448261dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#ad44d621cd6463f107484e21b448261dc">paint</a> (QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *)</td></tr>
+<tr class="memdesc:ad44d621cd6463f107484e21b448261dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Переопределение функции paint QGraphicsRectItem.  <a href="class_board_cell.html#ad44d621cd6463f107484e21b448261dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad44d621cd6463f107484e21b448261dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d71a52efaa8efede302e48768b9e54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a61d71a52efaa8efede302e48768b9e54">setWay</a> ()</td></tr>
+<tr class="memdesc:a61d71a52efaa8efede302e48768b9e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ставит флаг пути  <a href="class_board_cell.html#a61d71a52efaa8efede302e48768b9e54">Подробнее...</a><br /></td></tr>
+<tr class="separator:a61d71a52efaa8efede302e48768b9e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c824b448422ecb7db3f490f4ac6fca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a18c824b448422ecb7db3f490f4ac6fca">getIsWay</a> ()</td></tr>
+<tr class="memdesc:a18c824b448422ecb7db3f490f4ac6fca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение флага пути  <a href="class_board_cell.html#a18c824b448422ecb7db3f490f4ac6fca">Подробнее...</a><br /></td></tr>
+<tr class="separator:a18c824b448422ecb7db3f490f4ac6fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57bcf6c2677c8209e268b1128d56e6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#af57bcf6c2677c8209e268b1128d56e6b">setAim</a> ()</td></tr>
+<tr class="memdesc:af57bcf6c2677c8209e268b1128d56e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ставит флаг цели  <a href="class_board_cell.html#af57bcf6c2677c8209e268b1128d56e6b">Подробнее...</a><br /></td></tr>
+<tr class="separator:af57bcf6c2677c8209e268b1128d56e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ea4555acb072a7c36b5e7f4e954c872"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a1ea4555acb072a7c36b5e7f4e954c872">getIsAim</a> ()</td></tr>
+<tr class="memdesc:a1ea4555acb072a7c36b5e7f4e954c872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает значение флага цели  <a href="class_board_cell.html#a1ea4555acb072a7c36b5e7f4e954c872">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1ea4555acb072a7c36b5e7f4e954c872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Закрытые данные</h2></td></tr>
+<tr class="memitem:ad3a54b521d928a388bf31637db6e0d1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#ad3a54b521d928a388bf31637db6e0d1e">rowInd</a></td></tr>
+<tr class="separator:ad3a54b521d928a388bf31637db6e0d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab07cc9a1b75d93ce54326a8017dfc530"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#ab07cc9a1b75d93ce54326a8017dfc530">colInd</a></td></tr>
+<tr class="separator:ab07cc9a1b75d93ce54326a8017dfc530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f32eeafd9304e86db6f9a404f2d89af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a4f32eeafd9304e86db6f9a404f2d89af">size</a></td></tr>
+<tr class="separator:a4f32eeafd9304e86db6f9a404f2d89af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9e9518b9b4fbaf4962b09830559457"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a8f9e9518b9b4fbaf4962b09830559457">isBackground</a> = true</td></tr>
+<tr class="separator:a8f9e9518b9b4fbaf4962b09830559457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb552b505e2fb1656da80c22f5cff035"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#acb552b505e2fb1656da80c22f5cff035">isWay</a> = false</td></tr>
+<tr class="separator:acb552b505e2fb1656da80c22f5cff035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04703535924a36c579d0f6ce7ec535f1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board_cell.html#a04703535924a36c579d0f6ce7ec535f1">isAim</a> = false</td></tr>
+<tr class="separator:a04703535924a36c579d0f6ce7ec535f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс инкапсулирует графическое отображение и логику поведения ячеек игрового поля </p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="a74bbd4586ab6d8f81be4335dbaedad83" name="a74bbd4586ab6d8f81be4335dbaedad83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74bbd4586ab6d8f81be4335dbaedad83">&#9670;&#160;</a></span>BoardCell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BoardCell::BoardCell </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rowInd_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>colInd_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QGraphicsItem *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a1ea4555acb072a7c36b5e7f4e954c872" name="a1ea4555acb072a7c36b5e7f4e954c872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea4555acb072a7c36b5e7f4e954c872">&#9670;&#160;</a></span>getIsAim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardCell::getIsAim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает значение флага цели </p>
+
+</div>
+</div>
+<a id="a18c824b448422ecb7db3f490f4ac6fca" name="a18c824b448422ecb7db3f490f4ac6fca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c824b448422ecb7db3f490f4ac6fca">&#9670;&#160;</a></span>getIsWay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardCell::getIsWay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Возвращает значение флага пути </p>
+
+</div>
+</div>
+<a id="ad44d621cd6463f107484e21b448261dc" name="ad44d621cd6463f107484e21b448261dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad44d621cd6463f107484e21b448261dc">&#9670;&#160;</a></span>paint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardCell::paint </td>
+          <td>(</td>
+          <td class="paramtype">QPainter *&#160;</td>
+          <td class="paramname"><em>painter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QStyleOptionGraphicsItem *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Переопределение функции paint QGraphicsRectItem. </p>
+
+</div>
+</div>
+<a id="af57bcf6c2677c8209e268b1128d56e6b" name="af57bcf6c2677c8209e268b1128d56e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57bcf6c2677c8209e268b1128d56e6b">&#9670;&#160;</a></span>setAim()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardCell::setAim </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ставит флаг цели </p>
+
+</div>
+</div>
+<a id="a61d71a52efaa8efede302e48768b9e54" name="a61d71a52efaa8efede302e48768b9e54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d71a52efaa8efede302e48768b9e54">&#9670;&#160;</a></span>setWay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardCell::setWay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ставит флаг пути </p>
+
+</div>
+</div>
+<h2 class="groupheader">Данные класса</h2>
+<a id="ab07cc9a1b75d93ce54326a8017dfc530" name="ab07cc9a1b75d93ce54326a8017dfc530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab07cc9a1b75d93ce54326a8017dfc530">&#9670;&#160;</a></span>colInd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardCell::colInd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a04703535924a36c579d0f6ce7ec535f1" name="a04703535924a36c579d0f6ce7ec535f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04703535924a36c579d0f6ce7ec535f1">&#9670;&#160;</a></span>isAim</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardCell::isAim = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f9e9518b9b4fbaf4962b09830559457" name="a8f9e9518b9b4fbaf4962b09830559457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9e9518b9b4fbaf4962b09830559457">&#9670;&#160;</a></span>isBackground</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardCell::isBackground = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb552b505e2fb1656da80c22f5cff035" name="acb552b505e2fb1656da80c22f5cff035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb552b505e2fb1656da80c22f5cff035">&#9670;&#160;</a></span>isWay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardCell::isWay = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3a54b521d928a388bf31637db6e0d1e" name="ad3a54b521d928a388bf31637db6e0d1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3a54b521d928a388bf31637db6e0d1e">&#9670;&#160;</a></span>rowInd</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardCell::rowInd</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f32eeafd9304e86db6f9a404f2d89af" name="a4f32eeafd9304e86db6f9a404f2d89af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f32eeafd9304e86db6f9a404f2d89af">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardCell::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>src/game_lib/<a class="el" href="board__cell_8h_source.html">board_cell.h</a></li>
+<li>src/game_lib/<a class="el" href="board__cell_8cpp.html">board_cell.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_board_cell.html">BoardCell</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

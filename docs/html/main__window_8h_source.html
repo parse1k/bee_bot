@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bee bot: Исходный файл src/main_window.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bee bot<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">App for childs to teach programming basics</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('main__window_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">main_window.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="main__window_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BEE_BOT_MAIN_WINDOW_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BEE_BOT_MAIN_WINDOW_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QMainWindow&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../ui/ui_main_window.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="win__dialog_8h.html">win_dialog.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="level__button_8h.html">game_lib/level_button.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="game__board_8h.html">game_lib/game_board.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_main_window.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_main_window.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    Q_OBJECT</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_main_window.html">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a817ee73a2e65be9729f4c1552d86bfb4">handleLevelButtonClick</a>(<span class="keywordtype">int</span> levelInd);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a0138c98643be591899152f508175f444">handleControlClick</a>(std::string instruction);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#adacc6ecaabb2f34612fcdd3a75bcbd1f">handleRun</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a142f769aa884a02de72ae792f9b92735">restart</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a396786f90c7add45438fb4adc092255b">toMenu</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a18e7b1df610152078f6c8cf1a3b4d519">openWinDialog</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_main_window.html#a60e1549ded5ced8f1365e0d434239221">   31</a></span>    Ui_MainWindow <a class="code hl_variable" href="class_main_window.html#a60e1549ded5ced8f1365e0d434239221">ui</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_main_window.html#a509d18e641d47fd618c80a7511caa070">   33</a></span>    std::vector&lt;QPushButton *&gt; <a class="code hl_variable" href="class_main_window.html#a509d18e641d47fd618c80a7511caa070">levelButtons</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_main_window.html#a3f9d5fa77a00b10ab67c1e74556f088b">   34</a></span>    <a class="code hl_class" href="class_level_reader.html">LevelReader</a>* <a class="code hl_variable" href="class_main_window.html#a3f9d5fa77a00b10ab67c1e74556f088b">levelReader</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_main_window.html#ae2af7c47ed4a537ee5ccfe324255b3fa">   35</a></span>    <a class="code hl_class" href="class_win_dialog.html">WinDialog</a>* <a class="code hl_variable" href="class_main_window.html#ae2af7c47ed4a537ee5ccfe324255b3fa">winDialog</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_main_window.html#ac9f4798e695103bf529cc96e463d1df8">   36</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_main_window.html#ac9f4798e695103bf529cc96e463d1df8">currentLevelInd</a> = 0;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_main_window.html#a4133d6488897b2ddbe5cc0a4b3b23cad">   37</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_main_window.html#a4133d6488897b2ddbe5cc0a4b3b23cad">levelsNumber</a> = 6;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_main_window.html#a017e09f60e41611ab722ceb31712b972">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_main_window.html#a017e09f60e41611ab722ceb31712b972">levelButtonsRowsNumber</a>= 2;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_main_window.html#ab33485cf7f11156cfc6653ea12885ed0">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_main_window.html#ab33485cf7f11156cfc6653ea12885ed0">levelButtonsColsNumber</a> = <a class="code hl_variable" href="class_main_window.html#a4133d6488897b2ddbe5cc0a4b3b23cad">levelsNumber</a> / <a class="code hl_variable" href="class_main_window.html#a017e09f60e41611ab722ceb31712b972">levelButtonsRowsNumber</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_main_window.html#abc54b5928ee10fd388230e865ca3b547">   41</a></span>    std::vector&lt;std::string&gt; <a class="code hl_variable" href="class_main_window.html#abc54b5928ee10fd388230e865ca3b547">instructions</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_main_window.html#a5fd832dee1fd7d7861d78ced3e4717e2">   42</a></span>    <a class="code hl_class" href="class_game_board.html">GameBoard</a>* <a class="code hl_variable" href="class_main_window.html#a5fd832dee1fd7d7861d78ced3e4717e2">gameBoard</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a908e9ab6321e8985f5d903710214c333">initLevelButtons</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#aa846305d4ae16b22996019890a79e009">initGame</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#ae2496e2e0162c1916db2a855dc2ca282">initControls</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a257bf4aef37f06a328641fb3cb04a1aa">setButtonIcon</a>(QPushButton* button, QString filename, <span class="keywordtype">int</span> iconSize = 50);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#ad808ec5429370e43f4b2df1ea57e2ef3">connectControlButtons</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a841d4f489c8a922e1c27fcc6afecce06">drawInstructions</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">//BEE_BOT_MAIN_WINDOW_H</span></div>
+<div class="ttc" id="aclass_game_board_html"><div class="ttname"><a href="class_game_board.html">GameBoard</a></div><div class="ttdoc">Класс инкапсулирует графическое отображение и логику поведения игрового поля</div><div class="ttdef"><b>Definition:</b> game_board.h:14</div></div>
+<div class="ttc" id="aclass_level_reader_html"><div class="ttname"><a href="class_level_reader.html">LevelReader</a></div><div class="ttdoc">Класс менеджера уровней для считывания данных уровня из файла</div><div class="ttdef"><b>Definition:</b> level_reader.h:10</div></div>
+<div class="ttc" id="aclass_main_window_html"><div class="ttname"><a href="class_main_window.html">MainWindow</a></div><div class="ttdoc">Главное окно приложения</div><div class="ttdef"><b>Definition:</b> main_window.h:13</div></div>
+<div class="ttc" id="aclass_main_window_html_a0138c98643be591899152f508175f444"><div class="ttname"><a href="class_main_window.html#a0138c98643be591899152f508175f444">MainWindow::handleControlClick</a></div><div class="ttdeci">void handleControlClick(std::string instruction)</div><div class="ttdoc">Слот обрабатывает нажатие на элемент управления</div><div class="ttdef"><b>Definition:</b> main_window.cpp:75</div></div>
+<div class="ttc" id="aclass_main_window_html_a017e09f60e41611ab722ceb31712b972"><div class="ttname"><a href="class_main_window.html#a017e09f60e41611ab722ceb31712b972">MainWindow::levelButtonsRowsNumber</a></div><div class="ttdeci">int levelButtonsRowsNumber</div><div class="ttdef"><b>Definition:</b> main_window.h:38</div></div>
+<div class="ttc" id="aclass_main_window_html_a142f769aa884a02de72ae792f9b92735"><div class="ttname"><a href="class_main_window.html#a142f769aa884a02de72ae792f9b92735">MainWindow::restart</a></div><div class="ttdeci">void restart()</div><div class="ttdoc">Слот перезапуска игры</div><div class="ttdef"><b>Definition:</b> main_window.cpp:105</div></div>
+<div class="ttc" id="aclass_main_window_html_a18e7b1df610152078f6c8cf1a3b4d519"><div class="ttname"><a href="class_main_window.html#a18e7b1df610152078f6c8cf1a3b4d519">MainWindow::openWinDialog</a></div><div class="ttdeci">void openWinDialog()</div><div class="ttdoc">Слот открытия модального окна при победе</div><div class="ttdef"><b>Definition:</b> main_window.cpp:109</div></div>
+<div class="ttc" id="aclass_main_window_html_a257bf4aef37f06a328641fb3cb04a1aa"><div class="ttname"><a href="class_main_window.html#a257bf4aef37f06a328641fb3cb04a1aa">MainWindow::setButtonIcon</a></div><div class="ttdeci">void setButtonIcon(QPushButton *button, QString filename, int iconSize=50)</div><div class="ttdoc">Устанавливает иконку для кнопки</div><div class="ttdef"><b>Definition:</b> main_window.cpp:58</div></div>
+<div class="ttc" id="aclass_main_window_html_a396786f90c7add45438fb4adc092255b"><div class="ttname"><a href="class_main_window.html#a396786f90c7add45438fb4adc092255b">MainWindow::toMenu</a></div><div class="ttdeci">void toMenu()</div><div class="ttdoc">Слот возвращения в меню</div><div class="ttdef"><b>Definition:</b> main_window.cpp:113</div></div>
+<div class="ttc" id="aclass_main_window_html_a3f9d5fa77a00b10ab67c1e74556f088b"><div class="ttname"><a href="class_main_window.html#a3f9d5fa77a00b10ab67c1e74556f088b">MainWindow::levelReader</a></div><div class="ttdeci">LevelReader * levelReader</div><div class="ttdef"><b>Definition:</b> main_window.h:34</div></div>
+<div class="ttc" id="aclass_main_window_html_a4133d6488897b2ddbe5cc0a4b3b23cad"><div class="ttname"><a href="class_main_window.html#a4133d6488897b2ddbe5cc0a4b3b23cad">MainWindow::levelsNumber</a></div><div class="ttdeci">int levelsNumber</div><div class="ttdef"><b>Definition:</b> main_window.h:37</div></div>
+<div class="ttc" id="aclass_main_window_html_a509d18e641d47fd618c80a7511caa070"><div class="ttname"><a href="class_main_window.html#a509d18e641d47fd618c80a7511caa070">MainWindow::levelButtons</a></div><div class="ttdeci">std::vector&lt; QPushButton * &gt; levelButtons</div><div class="ttdef"><b>Definition:</b> main_window.h:33</div></div>
+<div class="ttc" id="aclass_main_window_html_a5fd832dee1fd7d7861d78ced3e4717e2"><div class="ttname"><a href="class_main_window.html#a5fd832dee1fd7d7861d78ced3e4717e2">MainWindow::gameBoard</a></div><div class="ttdeci">GameBoard * gameBoard</div><div class="ttdef"><b>Definition:</b> main_window.h:42</div></div>
+<div class="ttc" id="aclass_main_window_html_a60e1549ded5ced8f1365e0d434239221"><div class="ttname"><a href="class_main_window.html#a60e1549ded5ced8f1365e0d434239221">MainWindow::ui</a></div><div class="ttdeci">Ui_MainWindow ui</div><div class="ttdef"><b>Definition:</b> main_window.h:31</div></div>
+<div class="ttc" id="aclass_main_window_html_a817ee73a2e65be9729f4c1552d86bfb4"><div class="ttname"><a href="class_main_window.html#a817ee73a2e65be9729f4c1552d86bfb4">MainWindow::handleLevelButtonClick</a></div><div class="ttdeci">void handleLevelButtonClick(int levelInd)</div><div class="ttdoc">Слот обрабатывает запуск уровня</div><div class="ttdef"><b>Definition:</b> main_window.cpp:35</div></div>
+<div class="ttc" id="aclass_main_window_html_a841d4f489c8a922e1c27fcc6afecce06"><div class="ttname"><a href="class_main_window.html#a841d4f489c8a922e1c27fcc6afecce06">MainWindow::drawInstructions</a></div><div class="ttdeci">void drawInstructions()</div><div class="ttdoc">Отрисовывает список выбранных инструкций</div><div class="ttdef"><b>Definition:</b> main_window.cpp:80</div></div>
+<div class="ttc" id="aclass_main_window_html_a908e9ab6321e8985f5d903710214c333"><div class="ttname"><a href="class_main_window.html#a908e9ab6321e8985f5d903710214c333">MainWindow::initLevelButtons</a></div><div class="ttdeci">void initLevelButtons()</div><div class="ttdoc">Инициализирует кнопки выбора уровня</div><div class="ttdef"><b>Definition:</b> main_window.cpp:21</div></div>
+<div class="ttc" id="aclass_main_window_html_aa846305d4ae16b22996019890a79e009"><div class="ttname"><a href="class_main_window.html#aa846305d4ae16b22996019890a79e009">MainWindow::initGame</a></div><div class="ttdeci">void initGame()</div><div class="ttdoc">Инициализирует объекты игрового поля</div><div class="ttdef"><b>Definition:</b> main_window.cpp:40</div></div>
+<div class="ttc" id="aclass_main_window_html_ab33485cf7f11156cfc6653ea12885ed0"><div class="ttname"><a href="class_main_window.html#ab33485cf7f11156cfc6653ea12885ed0">MainWindow::levelButtonsColsNumber</a></div><div class="ttdeci">int levelButtonsColsNumber</div><div class="ttdef"><b>Definition:</b> main_window.h:39</div></div>
+<div class="ttc" id="aclass_main_window_html_abc54b5928ee10fd388230e865ca3b547"><div class="ttname"><a href="class_main_window.html#abc54b5928ee10fd388230e865ca3b547">MainWindow::instructions</a></div><div class="ttdeci">std::vector&lt; std::string &gt; instructions</div><div class="ttdef"><b>Definition:</b> main_window.h:41</div></div>
+<div class="ttc" id="aclass_main_window_html_ac9f4798e695103bf529cc96e463d1df8"><div class="ttname"><a href="class_main_window.html#ac9f4798e695103bf529cc96e463d1df8">MainWindow::currentLevelInd</a></div><div class="ttdeci">int currentLevelInd</div><div class="ttdef"><b>Definition:</b> main_window.h:36</div></div>
+<div class="ttc" id="aclass_main_window_html_ad808ec5429370e43f4b2df1ea57e2ef3"><div class="ttname"><a href="class_main_window.html#ad808ec5429370e43f4b2df1ea57e2ef3">MainWindow::connectControlButtons</a></div><div class="ttdeci">void connectControlButtons()</div><div class="ttdoc">Подключает слоты к элементам управления</div><div class="ttdef"><b>Definition:</b> main_window.cpp:64</div></div>
+<div class="ttc" id="aclass_main_window_html_adacc6ecaabb2f34612fcdd3a75bcbd1f"><div class="ttname"><a href="class_main_window.html#adacc6ecaabb2f34612fcdd3a75bcbd1f">MainWindow::handleRun</a></div><div class="ttdeci">void handleRun()</div><div class="ttdoc">Слот обрабатывает запуск инструкций</div><div class="ttdef"><b>Definition:</b> main_window.cpp:101</div></div>
+<div class="ttc" id="aclass_main_window_html_ae2496e2e0162c1916db2a855dc2ca282"><div class="ttname"><a href="class_main_window.html#ae2496e2e0162c1916db2a855dc2ca282">MainWindow::initControls</a></div><div class="ttdeci">void initControls()</div><div class="ttdoc">Инициализирует элементы управления</div><div class="ttdef"><b>Definition:</b> main_window.cpp:49</div></div>
+<div class="ttc" id="aclass_main_window_html_ae2af7c47ed4a537ee5ccfe324255b3fa"><div class="ttname"><a href="class_main_window.html#ae2af7c47ed4a537ee5ccfe324255b3fa">MainWindow::winDialog</a></div><div class="ttdeci">WinDialog * winDialog</div><div class="ttdef"><b>Definition:</b> main_window.h:35</div></div>
+<div class="ttc" id="aclass_win_dialog_html"><div class="ttname"><a href="class_win_dialog.html">WinDialog</a></div><div class="ttdoc">Модальное окно, которое открывается при прохождении уровня</div><div class="ttdef"><b>Definition:</b> win_dialog.h:7</div></div>
+<div class="ttc" id="agame__board_8h_html"><div class="ttname"><a href="game__board_8h.html">game_board.h</a></div></div>
+<div class="ttc" id="alevel__button_8h_html"><div class="ttname"><a href="level__button_8h.html">level_button.h</a></div></div>
+<div class="ttc" id="awin__dialog_8h_html"><div class="ttname"><a href="win__dialog_8h.html">win_dialog.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main__window_8h.html">main_window.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

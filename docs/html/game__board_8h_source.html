@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bee bot: Исходный файл src/game_lib/game_board.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bee bot<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">App for childs to teach programming basics</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('game__board_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">game_board.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="game__board_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BEE_BOT_GAME_BOARD_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BEE_BOT_GAME_BOARD_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QGraphicsView&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QGraphicsRectItem&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="board__cell_8h.html">board_cell.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="bee_8h.html">bee.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="level__reader_8h.html">level_reader.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_game_board.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_game_board.html">GameBoard</a> : <span class="keyword">public</span> QGraphicsView {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>Q_OBJECT</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_class" href="class_game_board.html">GameBoard</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a44708c28906693ace074377ef337f747">newGame</a>(<span class="keywordtype">int</span> levelInd_);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_game_board.html#a0a3cf5ae0f4a136a31aa175486626347">   21</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#a0a3cf5ae0f4a136a31aa175486626347">levelInd</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_game_board.html#a2211b7c8a773f9775ead147fc470c29e">   22</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#a2211b7c8a773f9775ead147fc470c29e">boardRowsNumber</a> = 10;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_game_board.html#a1225aea28d3f065ab299b9842c740e5d">   23</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#a1225aea28d3f065ab299b9842c740e5d">boardColsNumber</a> = 10;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_game_board.html#a4633d37d5c71d8bccbdf9687086774ef">   24</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#a4633d37d5c71d8bccbdf9687086774ef">cellSize</a> = 60;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_game_board.html#abc0c812b878a77609e367d146f02625c">   25</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#abc0c812b878a77609e367d146f02625c">width</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_game_board.html#a7ebb7029ed01b5bbc506b2b29b2f8a8c">   26</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#a7ebb7029ed01b5bbc506b2b29b2f8a8c">height</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_game_board.html#a5d39bb9075ff97c1624c70aea3c87328">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_game_board.html#a5d39bb9075ff97c1624c70aea3c87328">sleepTimeInMSec</a> = 500;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_game_board.html#aa55731d879c6ffc7abc2b0c3dffb73c5">   28</a></span>    QGraphicsScene* <a class="code hl_variable" href="class_game_board.html#aa55731d879c6ffc7abc2b0c3dffb73c5">scene</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_game_board.html#a0c38a9b0823757339f1609048ea9f831">   29</a></span>    std::vector&lt;std::vector&lt;BoardCell*&gt;&gt; <a class="code hl_variable" href="class_game_board.html#a0c38a9b0823757339f1609048ea9f831">boardCells</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_game_board.html#af8b142deb8f45b4460e607df94d7487f">   30</a></span>    <a class="code hl_class" href="class_bee.html">Bee</a>* <a class="code hl_variable" href="class_game_board.html#af8b142deb8f45b4460e607df94d7487f">bee</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_game_board.html#a64801336a591ee068cd146e0654b8389">   31</a></span>    <a class="code hl_class" href="class_level_reader.html">LevelReader</a>* <a class="code hl_variable" href="class_game_board.html#a64801336a591ee068cd146e0654b8389">levelReader</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_game_board.html#ad1fc976251d37e19757f136c8096ac3f">   32</a></span>    QTimer *<a class="code hl_variable" href="class_game_board.html#ad1fc976251d37e19757f136c8096ac3f">timer</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a85e0ae35a7874891f807ad363d9c5748">initBoardParams</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a6dfe461887e80835ccd839a3f4400fee">initScene</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a907bc961a49896957e18515c466fd130">initCells</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a37bb0873d365fd9bdb75698e18baeb34">initBee</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#aeab5fac386b768b3c158e9e4eb79bd42">createCell</a>(<span class="keywordtype">int</span> rowInd, <span class="keywordtype">int</span> colInd);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a91db6d8874d88e3a3f21838e32453853">resize</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_board.html#a86a44f8330ce48c76e1d40956ee458b3">runInstruction</a>(std::string instruction);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_game_board.html#afc666207b604285df902925bcd481bce">isRightPosition</a>(std::pair&lt;int, int&gt;);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#ab03b305a79d76034513b1ef74c6e1865">verifyWin</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_game_board.html#a3776fd808e75e1ad8e9e576dc3b55ab6">sleep</a>(<span class="keywordtype">int</span> time);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_board.html#aa9fc9f1f2148f221a50fd9cedcc9fedd">runBee</a>(std::vector&lt;std::string&gt; instructions);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_slot" href="class_game_board.html#a820e127b6af3d3844ea7d85de0dbc1d8">updateView</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>signals:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_game_board.html#a8976ecf016c603124336885b1288c4c9">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_game_board.html#a8976ecf016c603124336885b1288c4c9">win</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">//BEE_BOT_GAME_BOARD_H</span></div>
+<div class="ttc" id="abee_8h_html"><div class="ttname"><a href="bee_8h.html">bee.h</a></div></div>
+<div class="ttc" id="aboard__cell_8h_html"><div class="ttname"><a href="board__cell_8h.html">board_cell.h</a></div></div>
+<div class="ttc" id="aclass_bee_html"><div class="ttname"><a href="class_bee.html">Bee</a></div><div class="ttdoc">Класс инкапсулирует графическое отображение и логику поведения пчелы</div><div class="ttdef"><b>Definition:</b> bee.h:13</div></div>
+<div class="ttc" id="aclass_game_board_html"><div class="ttname"><a href="class_game_board.html">GameBoard</a></div><div class="ttdoc">Класс инкапсулирует графическое отображение и логику поведения игрового поля</div><div class="ttdef"><b>Definition:</b> game_board.h:14</div></div>
+<div class="ttc" id="aclass_game_board_html_a0a3cf5ae0f4a136a31aa175486626347"><div class="ttname"><a href="class_game_board.html#a0a3cf5ae0f4a136a31aa175486626347">GameBoard::levelInd</a></div><div class="ttdeci">int levelInd</div><div class="ttdef"><b>Definition:</b> game_board.h:21</div></div>
+<div class="ttc" id="aclass_game_board_html_a0c38a9b0823757339f1609048ea9f831"><div class="ttname"><a href="class_game_board.html#a0c38a9b0823757339f1609048ea9f831">GameBoard::boardCells</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; BoardCell * &gt; &gt; boardCells</div><div class="ttdef"><b>Definition:</b> game_board.h:29</div></div>
+<div class="ttc" id="aclass_game_board_html_a1225aea28d3f065ab299b9842c740e5d"><div class="ttname"><a href="class_game_board.html#a1225aea28d3f065ab299b9842c740e5d">GameBoard::boardColsNumber</a></div><div class="ttdeci">int boardColsNumber</div><div class="ttdef"><b>Definition:</b> game_board.h:23</div></div>
+<div class="ttc" id="aclass_game_board_html_a2211b7c8a773f9775ead147fc470c29e"><div class="ttname"><a href="class_game_board.html#a2211b7c8a773f9775ead147fc470c29e">GameBoard::boardRowsNumber</a></div><div class="ttdeci">int boardRowsNumber</div><div class="ttdef"><b>Definition:</b> game_board.h:22</div></div>
+<div class="ttc" id="aclass_game_board_html_a3776fd808e75e1ad8e9e576dc3b55ab6"><div class="ttname"><a href="class_game_board.html#a3776fd808e75e1ad8e9e576dc3b55ab6">GameBoard::sleep</a></div><div class="ttdeci">void sleep(int time)</div><div class="ttdoc">Задержка</div><div class="ttdef"><b>Definition:</b> game_board.cpp:123</div></div>
+<div class="ttc" id="aclass_game_board_html_a37bb0873d365fd9bdb75698e18baeb34"><div class="ttname"><a href="class_game_board.html#a37bb0873d365fd9bdb75698e18baeb34">GameBoard::initBee</a></div><div class="ttdeci">void initBee()</div><div class="ttdoc">Инициализирует объект и положение пчелы на поле</div><div class="ttdef"><b>Definition:</b> game_board.cpp:58</div></div>
+<div class="ttc" id="aclass_game_board_html_a44708c28906693ace074377ef337f747"><div class="ttname"><a href="class_game_board.html#a44708c28906693ace074377ef337f747">GameBoard::newGame</a></div><div class="ttdeci">void newGame(int levelInd_)</div><div class="ttdoc">Начинает новую игру с уровнем по levelInd_.</div><div class="ttdef"><b>Definition:</b> game_board.cpp:10</div></div>
+<div class="ttc" id="aclass_game_board_html_a4633d37d5c71d8bccbdf9687086774ef"><div class="ttname"><a href="class_game_board.html#a4633d37d5c71d8bccbdf9687086774ef">GameBoard::cellSize</a></div><div class="ttdeci">int cellSize</div><div class="ttdef"><b>Definition:</b> game_board.h:24</div></div>
+<div class="ttc" id="aclass_game_board_html_a5d39bb9075ff97c1624c70aea3c87328"><div class="ttname"><a href="class_game_board.html#a5d39bb9075ff97c1624c70aea3c87328">GameBoard::sleepTimeInMSec</a></div><div class="ttdeci">int sleepTimeInMSec</div><div class="ttdef"><b>Definition:</b> game_board.h:27</div></div>
+<div class="ttc" id="aclass_game_board_html_a64801336a591ee068cd146e0654b8389"><div class="ttname"><a href="class_game_board.html#a64801336a591ee068cd146e0654b8389">GameBoard::levelReader</a></div><div class="ttdeci">LevelReader * levelReader</div><div class="ttdef"><b>Definition:</b> game_board.h:31</div></div>
+<div class="ttc" id="aclass_game_board_html_a6dfe461887e80835ccd839a3f4400fee"><div class="ttname"><a href="class_game_board.html#a6dfe461887e80835ccd839a3f4400fee">GameBoard::initScene</a></div><div class="ttdeci">void initScene()</div><div class="ttdoc">Инициализирует сцену для QGraphicsView.</div><div class="ttdef"><b>Definition:</b> game_board.cpp:28</div></div>
+<div class="ttc" id="aclass_game_board_html_a7ebb7029ed01b5bbc506b2b29b2f8a8c"><div class="ttname"><a href="class_game_board.html#a7ebb7029ed01b5bbc506b2b29b2f8a8c">GameBoard::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> game_board.h:26</div></div>
+<div class="ttc" id="aclass_game_board_html_a820e127b6af3d3844ea7d85de0dbc1d8"><div class="ttname"><a href="class_game_board.html#a820e127b6af3d3844ea7d85de0dbc1d8">GameBoard::updateView</a></div><div class="ttdeci">void updateView()</div><div class="ttdoc">Обновляет графику</div><div class="ttdef"><b>Definition:</b> game_board.cpp:129</div></div>
+<div class="ttc" id="aclass_game_board_html_a85e0ae35a7874891f807ad363d9c5748"><div class="ttname"><a href="class_game_board.html#a85e0ae35a7874891f807ad363d9c5748">GameBoard::initBoardParams</a></div><div class="ttdeci">void initBoardParams()</div><div class="ttdoc">Инициализирует параметры поля</div><div class="ttdef"><b>Definition:</b> game_board.cpp:20</div></div>
+<div class="ttc" id="aclass_game_board_html_a86a44f8330ce48c76e1d40956ee458b3"><div class="ttname"><a href="class_game_board.html#a86a44f8330ce48c76e1d40956ee458b3">GameBoard::runInstruction</a></div><div class="ttdeci">bool runInstruction(std::string instruction)</div><div class="ttdoc">Запускает инструкции для пчелы</div><div class="ttdef"><b>Definition:</b> game_board.cpp:80</div></div>
+<div class="ttc" id="aclass_game_board_html_a8976ecf016c603124336885b1288c4c9"><div class="ttname"><a href="class_game_board.html#a8976ecf016c603124336885b1288c4c9">GameBoard::win</a></div><div class="ttdeci">void win()</div><div class="ttdoc">Сигнал победы</div></div>
+<div class="ttc" id="aclass_game_board_html_a907bc961a49896957e18515c466fd130"><div class="ttname"><a href="class_game_board.html#a907bc961a49896957e18515c466fd130">GameBoard::initCells</a></div><div class="ttdeci">void initCells()</div><div class="ttdoc">Инициализирует клетки игрового поля</div><div class="ttdef"><b>Definition:</b> game_board.cpp:34</div></div>
+<div class="ttc" id="aclass_game_board_html_a91db6d8874d88e3a3f21838e32453853"><div class="ttname"><a href="class_game_board.html#a91db6d8874d88e3a3f21838e32453853">GameBoard::resize</a></div><div class="ttdeci">void resize()</div><div class="ttdoc">Изменяет размер QGraphicsView.</div><div class="ttdef"><b>Definition:</b> game_board.cpp:64</div></div>
+<div class="ttc" id="aclass_game_board_html_aa55731d879c6ffc7abc2b0c3dffb73c5"><div class="ttname"><a href="class_game_board.html#aa55731d879c6ffc7abc2b0c3dffb73c5">GameBoard::scene</a></div><div class="ttdeci">QGraphicsScene * scene</div><div class="ttdef"><b>Definition:</b> game_board.h:28</div></div>
+<div class="ttc" id="aclass_game_board_html_aa9fc9f1f2148f221a50fd9cedcc9fedd"><div class="ttname"><a href="class_game_board.html#aa9fc9f1f2148f221a50fd9cedcc9fedd">GameBoard::runBee</a></div><div class="ttdeci">void runBee(std::vector&lt; std::string &gt; instructions)</div><div class="ttdoc">Запускает пчелу с переданными инструкциями</div><div class="ttdef"><b>Definition:</b> game_board.cpp:70</div></div>
+<div class="ttc" id="aclass_game_board_html_ab03b305a79d76034513b1ef74c6e1865"><div class="ttname"><a href="class_game_board.html#ab03b305a79d76034513b1ef74c6e1865">GameBoard::verifyWin</a></div><div class="ttdeci">void verifyWin()</div><div class="ttdoc">Проверяет и обрабатывает победу</div><div class="ttdef"><b>Definition:</b> game_board.cpp:115</div></div>
+<div class="ttc" id="aclass_game_board_html_abc0c812b878a77609e367d146f02625c"><div class="ttname"><a href="class_game_board.html#abc0c812b878a77609e367d146f02625c">GameBoard::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> game_board.h:25</div></div>
+<div class="ttc" id="aclass_game_board_html_ad1fc976251d37e19757f136c8096ac3f"><div class="ttname"><a href="class_game_board.html#ad1fc976251d37e19757f136c8096ac3f">GameBoard::timer</a></div><div class="ttdeci">QTimer * timer</div><div class="ttdef"><b>Definition:</b> game_board.h:32</div></div>
+<div class="ttc" id="aclass_game_board_html_aeab5fac386b768b3c158e9e4eb79bd42"><div class="ttname"><a href="class_game_board.html#aeab5fac386b768b3c158e9e4eb79bd42">GameBoard::createCell</a></div><div class="ttdeci">void createCell(int rowInd, int colInd)</div><div class="ttdoc">Создает клетку в положении rowInd, colInd.</div><div class="ttdef"><b>Definition:</b> game_board.cpp:52</div></div>
+<div class="ttc" id="aclass_game_board_html_af8b142deb8f45b4460e607df94d7487f"><div class="ttname"><a href="class_game_board.html#af8b142deb8f45b4460e607df94d7487f">GameBoard::bee</a></div><div class="ttdeci">Bee * bee</div><div class="ttdef"><b>Definition:</b> game_board.h:30</div></div>
+<div class="ttc" id="aclass_game_board_html_afc666207b604285df902925bcd481bce"><div class="ttname"><a href="class_game_board.html#afc666207b604285df902925bcd481bce">GameBoard::isRightPosition</a></div><div class="ttdeci">bool isRightPosition(std::pair&lt; int, int &gt;)</div><div class="ttdoc">Возвращает, может ли пчела попасть в клетку</div><div class="ttdef"><b>Definition:</b> game_board.cpp:107</div></div>
+<div class="ttc" id="aclass_level_reader_html"><div class="ttname"><a href="class_level_reader.html">LevelReader</a></div><div class="ttdoc">Класс менеджера уровней для считывания данных уровня из файла</div><div class="ttdef"><b>Definition:</b> level_reader.h:10</div></div>
+<div class="ttc" id="alevel__reader_8h_html"><div class="ttname"><a href="level__reader_8h.html">level_reader.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_204afddfd900c8075c856fc10620b995.html">game_lib</a></li><li class="navelem"><a class="el" href="game__board_8h.html">game_board.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

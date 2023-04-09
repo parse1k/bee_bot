@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bee bot: Исходный файл src/game_lib/level_reader.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bee bot<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">App for childs to teach programming basics</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('level__reader_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">level_reader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="level__reader_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BEE_BOT_LEVEL_READER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BEE_BOT_LEVEL_READER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_level_reader.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_level_reader.html">LevelReader</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_class" href="class_level_reader.html">LevelReader</a>(<span class="keywordtype">int</span> levelInd_);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_level_reader.html#a150837c9b6b310a955061337c476b2a2">   14</a></span>    std::pair&lt;int, int&gt; <a class="code hl_function" href="class_level_reader.html#a150837c9b6b310a955061337c476b2a2">getBoardSize</a>() { <span class="keywordflow">return</span> std::pair&lt;int, int&gt; {<a class="code hl_variable" href="class_level_reader.html#a4f83f40a1f9e9aaba78ff15f9c3b5dda">rowsNumber</a>, <a class="code hl_variable" href="class_level_reader.html#aa6064ed3013bf20e6f773547e345bf27">colsNumber</a>}; };</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_level_reader.html#a1bf04f8e2f2028a9412893a7e43b38b9">   16</a></span>    std::vector&lt;std::pair&lt;int ,int&gt;&gt; <a class="code hl_function" href="class_level_reader.html#a1bf04f8e2f2028a9412893a7e43b38b9">getRoads</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_level_reader.html#a9bda098b81ca78a2b714a82b8ae2f47e">roads</a>; };</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_level_reader.html#a4de16787769b776b1fa7a904bd107d46">   18</a></span>    std::pair&lt;int, int&gt; <a class="code hl_function" href="class_level_reader.html#a4de16787769b776b1fa7a904bd107d46">getBeePos</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_level_reader.html#a5244e4e66101e47c82cbcaa5ba0abff6">beePos</a>; };</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_level_reader.html#ab7780b35aee84206c3a7a63b2f49f9ac">   20</a></span>    std::pair&lt;int, int&gt; <a class="code hl_function" href="class_level_reader.html#ab7780b35aee84206c3a7a63b2f49f9ac">getAimPos</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_level_reader.html#a281d11e18812c0abb7680c80e5dea45d">aimPos</a>; };</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_level_reader.html#a261d1687de210aaf5767a7050bc67d5a">   22</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_level_reader.html#a261d1687de210aaf5767a7050bc67d5a">levelInd</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_level_reader.html#a4f83f40a1f9e9aaba78ff15f9c3b5dda">   23</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_level_reader.html#a4f83f40a1f9e9aaba78ff15f9c3b5dda">rowsNumber</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_level_reader.html#aa6064ed3013bf20e6f773547e345bf27">   24</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_level_reader.html#aa6064ed3013bf20e6f773547e345bf27">colsNumber</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_level_reader.html#a9bda098b81ca78a2b714a82b8ae2f47e">   25</a></span>    std::vector&lt;std::pair&lt;int ,int&gt;&gt; <a class="code hl_variable" href="class_level_reader.html#a9bda098b81ca78a2b714a82b8ae2f47e">roads</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_level_reader.html#a5244e4e66101e47c82cbcaa5ba0abff6">   26</a></span>    std::pair&lt;int, int&gt; <a class="code hl_variable" href="class_level_reader.html#a5244e4e66101e47c82cbcaa5ba0abff6">beePos</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_level_reader.html#a281d11e18812c0abb7680c80e5dea45d">   27</a></span>    std::pair&lt;int, int&gt; <a class="code hl_variable" href="class_level_reader.html#a281d11e18812c0abb7680c80e5dea45d">aimPos</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_level_reader.html#aaeff9885207614269982269a04698ba6">readLevel</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif </span><span class="comment">//BEE_BOT_LEVEL_READER_H</span></div>
+<div class="ttc" id="aclass_level_reader_html"><div class="ttname"><a href="class_level_reader.html">LevelReader</a></div><div class="ttdoc">Класс менеджера уровней для считывания данных уровня из файла</div><div class="ttdef"><b>Definition:</b> level_reader.h:10</div></div>
+<div class="ttc" id="aclass_level_reader_html_a150837c9b6b310a955061337c476b2a2"><div class="ttname"><a href="class_level_reader.html#a150837c9b6b310a955061337c476b2a2">LevelReader::getBoardSize</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getBoardSize()</div><div class="ttdoc">Возвращает размеры игрового поля</div><div class="ttdef"><b>Definition:</b> level_reader.h:14</div></div>
+<div class="ttc" id="aclass_level_reader_html_a1bf04f8e2f2028a9412893a7e43b38b9"><div class="ttname"><a href="class_level_reader.html#a1bf04f8e2f2028a9412893a7e43b38b9">LevelReader::getRoads</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int, int &gt; &gt; getRoads()</div><div class="ttdoc">Возвращает вектор дорог</div><div class="ttdef"><b>Definition:</b> level_reader.h:16</div></div>
+<div class="ttc" id="aclass_level_reader_html_a261d1687de210aaf5767a7050bc67d5a"><div class="ttname"><a href="class_level_reader.html#a261d1687de210aaf5767a7050bc67d5a">LevelReader::levelInd</a></div><div class="ttdeci">int levelInd</div><div class="ttdef"><b>Definition:</b> level_reader.h:22</div></div>
+<div class="ttc" id="aclass_level_reader_html_a281d11e18812c0abb7680c80e5dea45d"><div class="ttname"><a href="class_level_reader.html#a281d11e18812c0abb7680c80e5dea45d">LevelReader::aimPos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; aimPos</div><div class="ttdef"><b>Definition:</b> level_reader.h:27</div></div>
+<div class="ttc" id="aclass_level_reader_html_a4de16787769b776b1fa7a904bd107d46"><div class="ttname"><a href="class_level_reader.html#a4de16787769b776b1fa7a904bd107d46">LevelReader::getBeePos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getBeePos()</div><div class="ttdoc">Возвращает позицию пчелы</div><div class="ttdef"><b>Definition:</b> level_reader.h:18</div></div>
+<div class="ttc" id="aclass_level_reader_html_a4f83f40a1f9e9aaba78ff15f9c3b5dda"><div class="ttname"><a href="class_level_reader.html#a4f83f40a1f9e9aaba78ff15f9c3b5dda">LevelReader::rowsNumber</a></div><div class="ttdeci">int rowsNumber</div><div class="ttdef"><b>Definition:</b> level_reader.h:23</div></div>
+<div class="ttc" id="aclass_level_reader_html_a5244e4e66101e47c82cbcaa5ba0abff6"><div class="ttname"><a href="class_level_reader.html#a5244e4e66101e47c82cbcaa5ba0abff6">LevelReader::beePos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; beePos</div><div class="ttdef"><b>Definition:</b> level_reader.h:26</div></div>
+<div class="ttc" id="aclass_level_reader_html_a9bda098b81ca78a2b714a82b8ae2f47e"><div class="ttname"><a href="class_level_reader.html#a9bda098b81ca78a2b714a82b8ae2f47e">LevelReader::roads</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; int,int &gt; &gt; roads</div><div class="ttdef"><b>Definition:</b> level_reader.h:25</div></div>
+<div class="ttc" id="aclass_level_reader_html_aa6064ed3013bf20e6f773547e345bf27"><div class="ttname"><a href="class_level_reader.html#aa6064ed3013bf20e6f773547e345bf27">LevelReader::colsNumber</a></div><div class="ttdeci">int colsNumber</div><div class="ttdef"><b>Definition:</b> level_reader.h:24</div></div>
+<div class="ttc" id="aclass_level_reader_html_aaeff9885207614269982269a04698ba6"><div class="ttname"><a href="class_level_reader.html#aaeff9885207614269982269a04698ba6">LevelReader::readLevel</a></div><div class="ttdeci">void readLevel()</div><div class="ttdoc">Считывает данные уровня из файла по levelInd.</div><div class="ttdef"><b>Definition:</b> level_reader.cpp:7</div></div>
+<div class="ttc" id="aclass_level_reader_html_ab7780b35aee84206c3a7a63b2f49f9ac"><div class="ttname"><a href="class_level_reader.html#ab7780b35aee84206c3a7a63b2f49f9ac">LevelReader::getAimPos</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getAimPos()</div><div class="ttdoc">Возвращает позицию цели</div><div class="ttdef"><b>Definition:</b> level_reader.h:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_204afddfd900c8075c856fc10620b995.html">game_lib</a></li><li class="navelem"><a class="el" href="level__reader_8h.html">level_reader.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+var class_main_window =
+[
+    [ "MainWindow", "class_main_window.html#a996c5a2b6f77944776856f08ec30858d", null ],
+    [ "connectControlButtons", "class_main_window.html#ad808ec5429370e43f4b2df1ea57e2ef3", null ],
+    [ "drawInstructions", "class_main_window.html#a841d4f489c8a922e1c27fcc6afecce06", null ],
+    [ "handleControlClick", "class_main_window.html#a0138c98643be591899152f508175f444", null ],
+    [ "handleLevelButtonClick", "class_main_window.html#a817ee73a2e65be9729f4c1552d86bfb4", null ],
+    [ "handleRun", "class_main_window.html#adacc6ecaabb2f34612fcdd3a75bcbd1f", null ],
+    [ "initControls", "class_main_window.html#ae2496e2e0162c1916db2a855dc2ca282", null ],
+    [ "initGame", "class_main_window.html#aa846305d4ae16b22996019890a79e009", null ],
+    [ "initLevelButtons", "class_main_window.html#a908e9ab6321e8985f5d903710214c333", null ],
+    [ "openWinDialog", "class_main_window.html#a18e7b1df610152078f6c8cf1a3b4d519", null ],
+    [ "restart", "class_main_window.html#a142f769aa884a02de72ae792f9b92735", null ],
+    [ "setButtonIcon", "class_main_window.html#a257bf4aef37f06a328641fb3cb04a1aa", null ],
+    [ "toMenu", "class_main_window.html#a396786f90c7add45438fb4adc092255b", null ],
+    [ "currentLevelInd", "class_main_window.html#ac9f4798e695103bf529cc96e463d1df8", null ],
+    [ "gameBoard", "class_main_window.html#a5fd832dee1fd7d7861d78ced3e4717e2", null ],
+    [ "instructions", "class_main_window.html#abc54b5928ee10fd388230e865ca3b547", null ],
+    [ "levelButtons", "class_main_window.html#a509d18e641d47fd618c80a7511caa070", null ],
+    [ "levelButtonsColsNumber", "class_main_window.html#ab33485cf7f11156cfc6653ea12885ed0", null ],
+    [ "levelButtonsRowsNumber", "class_main_window.html#a017e09f60e41611ab722ceb31712b972", null ],
+    [ "levelReader", "class_main_window.html#a3f9d5fa77a00b10ab67c1e74556f088b", null ],
+    [ "levelsNumber", "class_main_window.html#a4133d6488897b2ddbe5cc0a4b3b23cad", null ],
+    [ "ui", "class_main_window.html#a60e1549ded5ced8f1365e0d434239221", null ],
+    [ "winDialog", "class_main_window.html#ae2af7c47ed4a537ee5ccfe324255b3fa", null ]
+];

@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bee bot: Исходный файл src/game_lib/bee.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Bee bot<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">App for childs to teach programming basics</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('bee_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">bee.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bee_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BEE_BOT_BEE_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BEE_BOT_BEE_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QGraphicsRectItem&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;QtWidgets&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_bee.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_bee.html">Bee</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QGraphicsRectItem {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    Q_OBJECT</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="class_bee.html">Bee</a>(<span class="keywordtype">int</span> rowInd_, <span class="keywordtype">int</span> colInd_, <span class="keywordtype">int</span> size_, <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#ad577fa285f3703ca9ab55504718110db">cellSize</a>, QGraphicsItem* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#a4d640bbc2e65e78dfb73724683b915a4">paint</a>(QPainter *painter, <span class="keyword">const</span> QStyleOptionGraphicsItem *option, QWidget *);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::pair&lt;int, int&gt; <a class="code hl_function" href="class_bee.html#ad4f586c30dfe7b754f8d70f3b7c02983">getPosition</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::pair&lt;int, int&gt; <a class="code hl_function" href="class_bee.html#ab1a56fa0dc041ec6540b2964856fff40">getForwardPosition</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::pair&lt;int, int&gt; <a class="code hl_function" href="class_bee.html#aa61151bb83d7c84d39f05bc103a33c20">getBackPosition</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#a8cddd9416b3211e8139346a29b65ddc8">goForward</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#a83206b94ea7067b3a17c6f5f949f5030">goBack</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#a79a8a9b693b61de7e9485e6ce177f4ae">turnRight</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#a96b23623d59612a8d178e9cfd2458189">turnLeft</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#ad2b832ae2d749b41677eefd9c2f4b99a">knockForwardWall</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#ab21f348b005cfb31697202356b53c852">knockBackWall</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#ada18ca9049a09c17904f62a2c9165dfe">moveBias</a>(<span class="keywordtype">float</span> rowBias_, <span class="keywordtype">float</span> colBias_);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_bee.html#a91dbc2d116f665ccb07ce3f7996f8666">   38</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#a91dbc2d116f665ccb07ce3f7996f8666">rowInd</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_bee.html#a64241bf416d9ea702776b5d374174243">   39</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#a64241bf416d9ea702776b5d374174243">colInd</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_bee.html#a08eb7935bd697652dc379a9c07f9eae2">   40</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_bee.html#a08eb7935bd697652dc379a9c07f9eae2">rowBias</a> = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_bee.html#a00fdba3dac544334400649f4acaa7cbf">   41</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_bee.html#a00fdba3dac544334400649f4acaa7cbf">colBias</a> = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_bee.html#abfb0976e490143467216ded7c7860615">   42</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_bee.html#abfb0976e490143467216ded7c7860615">bias</a> = 0.2;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_bee.html#a0f7500519feaa9a5675868fcf23bd740">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#a0f7500519feaa9a5675868fcf23bd740">size</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_bee.html#ad577fa285f3703ca9ab55504718110db">   44</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#ad577fa285f3703ca9ab55504718110db">cellSize</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_bee.html#a94e3365dd8259f2cb44d7f5cb057e41a">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#a94e3365dd8259f2cb44d7f5cb057e41a">paddings</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_bee.html#a96f9012c69b4041b32d7ac004eb2d6c7">   46</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#a96f9012c69b4041b32d7ac004eb2d6c7">yDiff</a> = -1;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_bee.html#a4f91d801fdd48f0aeece4bfc64797c8d">   47</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_bee.html#a4f91d801fdd48f0aeece4bfc64797c8d">xDiff</a> = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    QPixmap <a class="code hl_function" href="class_bee.html#a60716bc7ca454ded6a0c2a420dfde7b4">getRotatedPixmap</a>(QPixmap pixmap, <span class="keywordtype">int</span> degrees);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_bee.html#a1eba605123101c589e80630fc328e3df">sleep</a>(<span class="keywordtype">int</span> time);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>signals:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_bee.html#addeb7c8abe0f0f052eccec4cb0dc9253">   54</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_bee.html#addeb7c8abe0f0f052eccec4cb0dc9253">updateScene</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif </span><span class="comment">//BEE_BOT_BEE_H</span></div>
+<div class="ttc" id="aclass_bee_html"><div class="ttname"><a href="class_bee.html">Bee</a></div><div class="ttdoc">Класс инкапсулирует графическое отображение и логику поведения пчелы</div><div class="ttdef"><b>Definition:</b> bee.h:13</div></div>
+<div class="ttc" id="aclass_bee_html_a00fdba3dac544334400649f4acaa7cbf"><div class="ttname"><a href="class_bee.html#a00fdba3dac544334400649f4acaa7cbf">Bee::colBias</a></div><div class="ttdeci">float colBias</div><div class="ttdef"><b>Definition:</b> bee.h:41</div></div>
+<div class="ttc" id="aclass_bee_html_a08eb7935bd697652dc379a9c07f9eae2"><div class="ttname"><a href="class_bee.html#a08eb7935bd697652dc379a9c07f9eae2">Bee::rowBias</a></div><div class="ttdeci">float rowBias</div><div class="ttdef"><b>Definition:</b> bee.h:40</div></div>
+<div class="ttc" id="aclass_bee_html_a0f7500519feaa9a5675868fcf23bd740"><div class="ttname"><a href="class_bee.html#a0f7500519feaa9a5675868fcf23bd740">Bee::size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> bee.h:43</div></div>
+<div class="ttc" id="aclass_bee_html_a1eba605123101c589e80630fc328e3df"><div class="ttname"><a href="class_bee.html#a1eba605123101c589e80630fc328e3df">Bee::sleep</a></div><div class="ttdeci">void sleep(int time)</div><div class="ttdoc">Задержка</div><div class="ttdef"><b>Definition:</b> bee.cpp:78</div></div>
+<div class="ttc" id="aclass_bee_html_a4d640bbc2e65e78dfb73724683b915a4"><div class="ttname"><a href="class_bee.html#a4d640bbc2e65e78dfb73724683b915a4">Bee::paint</a></div><div class="ttdeci">void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *)</div><div class="ttdoc">Переопределение функции paint QGraphicsRectItem.</div><div class="ttdef"><b>Definition:</b> bee.cpp:9</div></div>
+<div class="ttc" id="aclass_bee_html_a4f91d801fdd48f0aeece4bfc64797c8d"><div class="ttname"><a href="class_bee.html#a4f91d801fdd48f0aeece4bfc64797c8d">Bee::xDiff</a></div><div class="ttdeci">int xDiff</div><div class="ttdef"><b>Definition:</b> bee.h:47</div></div>
+<div class="ttc" id="aclass_bee_html_a60716bc7ca454ded6a0c2a420dfde7b4"><div class="ttname"><a href="class_bee.html#a60716bc7ca454ded6a0c2a420dfde7b4">Bee::getRotatedPixmap</a></div><div class="ttdeci">QPixmap getRotatedPixmap(QPixmap pixmap, int degrees)</div><div class="ttdoc">Возвращает повернутое изображение на degrees.</div><div class="ttdef"><b>Definition:</b> bee.cpp:20</div></div>
+<div class="ttc" id="aclass_bee_html_a64241bf416d9ea702776b5d374174243"><div class="ttname"><a href="class_bee.html#a64241bf416d9ea702776b5d374174243">Bee::colInd</a></div><div class="ttdeci">int colInd</div><div class="ttdef"><b>Definition:</b> bee.h:39</div></div>
+<div class="ttc" id="aclass_bee_html_a79a8a9b693b61de7e9485e6ce177f4ae"><div class="ttname"><a href="class_bee.html#a79a8a9b693b61de7e9485e6ce177f4ae">Bee::turnRight</a></div><div class="ttdeci">void turnRight()</div><div class="ttdoc">Поворот направо</div><div class="ttdef"><b>Definition:</b> bee.cpp:54</div></div>
+<div class="ttc" id="aclass_bee_html_a83206b94ea7067b3a17c6f5f949f5030"><div class="ttname"><a href="class_bee.html#a83206b94ea7067b3a17c6f5f949f5030">Bee::goBack</a></div><div class="ttdeci">void goBack()</div><div class="ttdoc">Ход назад</div><div class="ttdef"><b>Definition:</b> bee.cpp:43</div></div>
+<div class="ttc" id="aclass_bee_html_a8cddd9416b3211e8139346a29b65ddc8"><div class="ttname"><a href="class_bee.html#a8cddd9416b3211e8139346a29b65ddc8">Bee::goForward</a></div><div class="ttdeci">void goForward()</div><div class="ttdoc">Ход вперед</div><div class="ttdef"><b>Definition:</b> bee.cpp:38</div></div>
+<div class="ttc" id="aclass_bee_html_a91dbc2d116f665ccb07ce3f7996f8666"><div class="ttname"><a href="class_bee.html#a91dbc2d116f665ccb07ce3f7996f8666">Bee::rowInd</a></div><div class="ttdeci">int rowInd</div><div class="ttdef"><b>Definition:</b> bee.h:38</div></div>
+<div class="ttc" id="aclass_bee_html_a94e3365dd8259f2cb44d7f5cb057e41a"><div class="ttname"><a href="class_bee.html#a94e3365dd8259f2cb44d7f5cb057e41a">Bee::paddings</a></div><div class="ttdeci">int paddings</div><div class="ttdef"><b>Definition:</b> bee.h:45</div></div>
+<div class="ttc" id="aclass_bee_html_a96b23623d59612a8d178e9cfd2458189"><div class="ttname"><a href="class_bee.html#a96b23623d59612a8d178e9cfd2458189">Bee::turnLeft</a></div><div class="ttdeci">void turnLeft()</div><div class="ttdoc">Поворот налево</div><div class="ttdef"><b>Definition:</b> bee.cpp:48</div></div>
+<div class="ttc" id="aclass_bee_html_a96f9012c69b4041b32d7ac004eb2d6c7"><div class="ttname"><a href="class_bee.html#a96f9012c69b4041b32d7ac004eb2d6c7">Bee::yDiff</a></div><div class="ttdeci">int yDiff</div><div class="ttdef"><b>Definition:</b> bee.h:46</div></div>
+<div class="ttc" id="aclass_bee_html_aa61151bb83d7c84d39f05bc103a33c20"><div class="ttname"><a href="class_bee.html#aa61151bb83d7c84d39f05bc103a33c20">Bee::getBackPosition</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getBackPosition()</div><div class="ttdef"><b>Definition:</b> bee.cpp:34</div></div>
+<div class="ttc" id="aclass_bee_html_ab1a56fa0dc041ec6540b2964856fff40"><div class="ttname"><a href="class_bee.html#ab1a56fa0dc041ec6540b2964856fff40">Bee::getForwardPosition</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getForwardPosition()</div><div class="ttdef"><b>Definition:</b> bee.cpp:30</div></div>
+<div class="ttc" id="aclass_bee_html_ab21f348b005cfb31697202356b53c852"><div class="ttname"><a href="class_bee.html#ab21f348b005cfb31697202356b53c852">Bee::knockBackWall</a></div><div class="ttdeci">void knockBackWall()</div><div class="ttdoc">Стук в стену сзади (когда невозможно сходить назад)</div><div class="ttdef"><b>Definition:</b> bee.cpp:67</div></div>
+<div class="ttc" id="aclass_bee_html_abfb0976e490143467216ded7c7860615"><div class="ttname"><a href="class_bee.html#abfb0976e490143467216ded7c7860615">Bee::bias</a></div><div class="ttdeci">float bias</div><div class="ttdef"><b>Definition:</b> bee.h:42</div></div>
+<div class="ttc" id="aclass_bee_html_ad2b832ae2d749b41677eefd9c2f4b99a"><div class="ttname"><a href="class_bee.html#ad2b832ae2d749b41677eefd9c2f4b99a">Bee::knockForwardWall</a></div><div class="ttdeci">void knockForwardWall()</div><div class="ttdoc">Стук в стену спереди (когда невозможно сходить вперед)</div><div class="ttdef"><b>Definition:</b> bee.cpp:61</div></div>
+<div class="ttc" id="aclass_bee_html_ad4f586c30dfe7b754f8d70f3b7c02983"><div class="ttname"><a href="class_bee.html#ad4f586c30dfe7b754f8d70f3b7c02983">Bee::getPosition</a></div><div class="ttdeci">std::pair&lt; int, int &gt; getPosition()</div><div class="ttdef"><b>Definition:</b> bee.cpp:26</div></div>
+<div class="ttc" id="aclass_bee_html_ad577fa285f3703ca9ab55504718110db"><div class="ttname"><a href="class_bee.html#ad577fa285f3703ca9ab55504718110db">Bee::cellSize</a></div><div class="ttdeci">int cellSize</div><div class="ttdef"><b>Definition:</b> bee.h:44</div></div>
+<div class="ttc" id="aclass_bee_html_ada18ca9049a09c17904f62a2c9165dfe"><div class="ttname"><a href="class_bee.html#ada18ca9049a09c17904f62a2c9165dfe">Bee::moveBias</a></div><div class="ttdeci">void moveBias(float rowBias_, float colBias_)</div><div class="ttdoc">Смещение пчелы на rowBias_ по y и colBias_ по x.</div><div class="ttdef"><b>Definition:</b> bee.cpp:73</div></div>
+<div class="ttc" id="aclass_bee_html_addeb7c8abe0f0f052eccec4cb0dc9253"><div class="ttname"><a href="class_bee.html#addeb7c8abe0f0f052eccec4cb0dc9253">Bee::updateScene</a></div><div class="ttdeci">void updateScene()</div><div class="ttdoc">Сигнал для обновления графики</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_204afddfd900c8075c856fc10620b995.html">game_lib</a></li><li class="navelem"><a class="el" href="bee_8h.html">bee.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>
